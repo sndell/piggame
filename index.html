@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v6.2.0/css/all.css"
+    />
+    <title>Pig game</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="side active" id="player1">
+          <h1 class="side__text">Player 1</h1>
+          <p class="side__score">0</p>
+          <p class="side__additional">+0</p>
+        </div>
+        <div class="middle">
+          <button class="middle__btn" onclick="resetStats()">
+            <i class="fa-solid fa-plus"></i>New game
+          </button>
+          <img class="middle__img" id="die1" src="img/dice-1.png" alt="dice" />
+          <img class="middle__img" id="die2" src="img/dice-1.png" alt="dice" />
+
+          <button class="middle__btn" onclick="handleRoll()">
+            <i class="fa-solid fa-arrows-rotate"></i>Roll dice
+          </button>
+          <button class="middle__btn" onclick="handleCollect()">
+            <i class="fa-solid fa-piggy-bank"></i>Collect points
+          </button>
+          <div class="middle-container">
+            <label for="winScore" class="middle__label">Score to win</label>
+            <input
+              type="text"
+              id="winScore"
+              class="middle__input"
+              value="100"
+            />
+          </div>
+        </div>
+        <div class="side" id="player2">
+          <h1 class="side__text">Player 2</h1>
+          <p class="side__score">0</p>
+          <p class="side__additional">+0</p>
+        </div>
+      </div>
+    </main>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
